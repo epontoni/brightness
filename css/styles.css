@@ -8,8 +8,8 @@ body {
 
 .brightness {
     background: rgba(15, 14, 23, 1);
-    inline-size: 80%;
-    min-block-size: 80%;
+    inline-size: 90%;
+    min-block-size: 90%;
     margin-inline: auto;
     margin-block: auto;
     display: flex;
@@ -124,4 +124,21 @@ input[type=range]::before {
     width: 55px;
     height: 55px;
     background-image: url('../images/sun.png');
+}
+
+@media screen and (max-width: 450px){
+    input[type=range] {
+        width: 50%;
+    }
+
+    input[type=range]::before {
+        position: absolute;
+        top: -5px;
+        left: -40px;
+        content: '';
+        width: 30px;
+        height: 30px;
+        background-image: url('../images/sun.png');
+        background-size: cover;
+    }
 }
